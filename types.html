@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,17 +25,32 @@
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="items.html">Items</a>
             <a class="nav-link" href="pokedex.html">Pokedex</a>
-            <a class="nav-link active" href="moves.html">Moves <span class="sr-only">(current)</span></a></a>
-            <a class="nav-link" href="types.html">Types</a>
+            <a class="nav-link" href="moves.html">Moves</a>
+            <a class="nav-link active" href="types.html">Types <span class="sr-only">(current)</span></a>
             </div>
         </div>
         </nav>
 
-    <div class="container"> <!--Search bar for searching move names-->
+    <div class="container"> <!--Search bar for searching typings-->
         <form class="my-5 my-lg-7">
-            <input class="form-control mr-sm-2" type="search" placeholder="Enter Move Name" aria-label="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Enter Type Name" aria-label="Search">
             <button class="btn btn-outline-warning my-2 my-sm-2" type="submit">Search</button>
         </form>
+    </div>
+
+    <div class="d-flex flex-row container-sm mb-2">
+            <div class="container-sm">
+                <div class="card" style="width: 18rem; height: 20rem;">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="card-img-top" alt="Pokemon">
+                </div>
+            </div>
+            <div class="container-sm">
+                <div class="card" style="width: 48rem; height: 20rem;">
+                    <div class="card-body">
+                        <p class="card-text">Electric<br><br>Generation Introduced: Gen I<br></p>
+                    </div>
+                </div>
+            </div><!-- This displays the data/information gathered from the api -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -23,8 +23,10 @@
           <div class="navbar-nav">
             <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
             <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="items.html">Items</a>
             <a class="nav-link" href="pokedex.html">Pokedex</a>
             <a class="nav-link" href="moves.html">Moves</a>
+            <a class="nav-link" href="types.html">Types</a>
           </div>
         </div>
       </nav>
@@ -32,15 +34,26 @@
     <container class="text-sm-center"> <!--Jumbotron at top of page-->
       <div class="jumbotron jumbotron-fluid bg-dark text-white">
             <h1 class="display-4">Welcome to the Pokedex.</h1>
-            <p class="lead">This is a simple site that allows you to search for a Pokemon and acquire information on them.</p>
+            <p class="lead">This is a simple site that allows you to search for info on Pokemon, items, moves and types.</p>
       </div>
     </container>
 
     <div class="container">
     <div class="card-deck">
-      <div class="card border-bottom border-warning rounded-0"> <!--First card code that links to Pokedex page, with centered image-->
+        <div class="card border-bottom border-warning rounded-0"> <!--First card code that links to Items page, with centered image-->
           <div class="container-sm bg-warning d-flex justify-content-center">
-              <img class="img-fluid" src="https://vignette.wikia.nocookie.net/pkmnshuffle/images/7/77/Pikachu.png/revision/latest/scale-to-width-down/340?cb=20170407192412" class="card-img-top" alt="Pikachu">
+              <img class="img-fluid" src="Pichuface.png" class="card-img-top" alt="Pichu">
+          </div> 
+      <div class="card-body bg-dark text-light">
+          <h5 class="card-title">Items</h5>
+          <p class="card-text">Lets you view Item information from R&B to B&W.</p>
+          <a href="pokedex.html" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Click to View</a>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+      </div>
+      <div class="card border-bottom border-warning rounded-0"> <!--Second card code that links to Pokedex page, with centered image-->
+          <div class="container-sm bg-warning d-flex justify-content-center">
+              <img class="img-fluid" src="pikachuface2.png" class="card-img-top" alt="Pikachu">
           </div> 
       <div class="card-body bg-dark text-light">
           <h5 class="card-title">Pokedex</h5>
@@ -51,16 +64,27 @@
       </div>
       <div class="card border-bottom border-warning rounded-0"> <!--Second card code that links to Moves page, with centered image-->
           <div class="container-sm bg-warning d-flex justify-content-center">
-              <img class="img-fluid" src="https://lh3.googleusercontent.com/proxy/WOezg5W3tNC_281Cn5nZ3lXWgwjLC9U5vdTL3udb085SULtAB9QK4GMrYt9iPciBUodzuS7BkiAmNb4258_aB-24EiUqLhocDhTOntNyhv1Wgcq68YE" class="card-img-top" alt="Raichu">
+              <img class="img-fluid" src="raichuface.png" class="card-img-top" alt="Raichu">
           </div>
       <div class="card-body bg-dark text-light">
           <h5 class="card-title">Moves</h5>
-          <p class="card-text">Lets you view move information from R&B to B&W.</p>
+          <p class="card-text">Lets you view Move information from R&B to B&W.</p>
           <a href="moves.html" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Click to View</a>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
       </div>
-      </div>
+    <div class="card border-bottom border-warning rounded-0"> <!--Fourth card code that links to Types page, with centered image-->
+      <div class="container-sm bg-warning d-flex justify-content-center">
+          <img class="img-fluid" src="alolanraichuface.png" class="card-img-top" alt="Ditto">
+      </div> 
+  <div class="card-body bg-dark text-light">
+      <h5 class="card-title">Types</h5>
+      <p class="card-text">Lets you view Typing information from R&B to B&W.</p>
+      <a href="pokedex.html" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Click to View</a>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+  </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
