@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokedex</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="pokedex.js" defer></script>
     <style type="text/css">
         body { background: #343a40 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
      </style>
@@ -34,19 +35,23 @@
     <div class="container">
         <form class="my-5 my-lg-7">
             <input class="form-control mr-sm-2" type="search" placeholder="Enter Pokemon Name or Pokedex Number" aria-label="Search">
-            <button class="btn btn-outline-warning my-2 my-sm-2" type="submit">Search</button>
+            <button id="get-btn"type='button' class="btn btn-outline-warning my-2 my-sm-2">Search</button>
         </form>
     </div> <!-- This is the search bar, content would be put into here and gather information from the api, adding it to the page -->
     <div class="d-flex flex-row container-sm mb-2">
             <div class="container-sm">
                 <div class="card" style="width: 18rem; height: 20rem;">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="card-img-top" alt="Pokemon">
+                    <img id="pokedex_screen" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="card-img-top" alt="Pokemon">
                 </div>
             </div><!-- This displays the image gathered from the api -->
             <div class="container-sm">
                 <div class="card" style="width: 48rem; height: 20rem;">
                     <div class="card-body">
-                        <p class="card-text">Pikachu<br><br>Pokedex Number: #25<br><br>Type: Electric<br><br>Abilities: Static & Lighting Rod<br>Shiny Color: <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png"> </p>
+                        <p id="info_name" id="pName" class="card-text">Pikachu</p>
+                        <p id="info_id" class="card-text">Pokedex Number: #25</p>
+                        <p class="card-text">Type: Electric</p>
+                        <p class="card-text">Abilities: Static & Lighting Rod</p>
+                        <p class="card-text">Shiny Color: <img id="pokedex_screen_shiny" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png"> </p>
                     </div>
                 </div>
             </div><!-- This displays the data/information gathered from the api -->
