@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moves</title>
+    <script src="types.js" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style type="text/css">
         body { background: #343a40 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+        input { border: none; padding-top: 1em; padding-bottom: 1em; }
      </style>
 </head>
 <body>
@@ -33,21 +35,28 @@
 
     <div class="container"> <!--Search bar for searching typings-->
         <form class="my-5 my-lg-7">
-            <input class="form-control mr-sm-2" type="search" placeholder="Enter Type Name" aria-label="Search">
-            <button class="btn btn-outline-warning my-2 my-sm-2" type="submit">Search</button>
+            <input id="pName" class="form-control mr-sm-2" type="search" placeholder="Enter Type Name" aria-label="Search">
+            <button id="get-btn" class="btn btn-outline-warning my-2 my-sm-2" type="button">Search</button>
         </form>
     </div>
 
     <div class="d-flex flex-row container-sm mb-2">
             <div class="container-sm">
                 <div class="card" style="width: 18rem; height: 20rem;">
-                    <img src="types/Electric.png" class="card-img-top" alt="Type">
+                    <img id="typeImg" src="types/Electric.png" class="card-img-top" alt="Type">
                 </div>
             </div>
             <div class="container-sm">
                 <div class="card overflow-auto" style="width: 48rem; height: 20rem;">
                     <div class="card-body">
-                        <p class="card-text">Electric<br><br>Generation Introduced: Gen I<br><br>2x Damage From:<br><img src="types/Ground_Icon.png" alt="Ground"> Ground<br><br>2x Damage To:<br><img src="types/Flying_Icon.png" alt="Flying"> Flying<br><img src="types/Water_Icon.png" alt="Water"> Water<br><br>1/2 Damage From:<br><img src="types/Flying_Icon.png" alt="Flying"> Flying<br><img src="types/Steel_Icon.png" alt="Steel"> Steel<br><img src="types/Electric_Icon.png" alt="Electric"> Electric<br><br>1/2 Damage To:<br><img src="types/Grass_Icon.png" alt="Grass"> Grass<br><img src="types/Electric_Icon.png" alt="Electric"> Electric<br><img src="types/Dragon_Icon.png" alt="Dragon"> Dragon<br><br>No Damage To:<br><img src="types/Ground_Icon.png" alt="Ground"> Ground</p>
+                        <input type="text" readonly placeholder="Type Name" id="type_name"></input><br>
+                        <input type="text" readonly placeholder="Generation Introduced" id="type_gen"></input><br>
+                        <input type="text" readonly placeholder="2x Damage From" id="type_2xfrom"></input><br>
+                        <input type="text" readonly placeholder="2x Damage To" id="type_2xto"></input><br>
+                        <input type="text" readonly placeholder="1/2 Damage From" id="type_1/2from"></input><br>
+                        <input type="text" readonly placeholder="1/2 Damage To" id="type_1/2to"></input><br>
+                        <input type="text" readonly placeholder="No Damage To" id="type_noneto"></input><br>
+                        <!--  <p class="card-text">Electric<br><br>Generation Introduced: Gen I<br><br>2x Damage From:<br><img src="types/Ground_Icon.png" alt="Ground"> Ground<br><br>2x Damage To:<br><img src="types/Flying_Icon.png" alt="Flying"> Flying<br><img src="types/Water_Icon.png" alt="Water"> Water<br><br>1/2 Damage From:<br><img src="types/Flying_Icon.png" alt="Flying"> Flying<br><img src="types/Steel_Icon.png" alt="Steel"> Steel<br><img src="types/Electric_Icon.png" alt="Electric"> Electric<br><br>1/2 Damage To:<br><img src="types/Grass_Icon.png" alt="Grass"> Grass<br><img src="types/Electric_Icon.png" alt="Electric"> Electric<br><img src="types/Dragon_Icon.png" alt="Dragon"> Dragon<br><br>No Damage To:<br><img src="types/Ground_Icon.png" alt="Ground"> Ground</p>-->
                     </div>
                 </div>
             </div><!-- This displays the data/information gathered from the api -->
