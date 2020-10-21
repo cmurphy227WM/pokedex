@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style type="text/css">
         body { background: #343a40 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+        input { border: none; padding-top: 1em; padding-bottom: 1em; }
      </style>
 </head>
 <body>
@@ -46,7 +47,10 @@
             <div class="container-sm">
                 <div class="card" style="width: 48rem; height: 20rem;">
                     <div class="card-body">
-                        <p class="card-text">Ultra Ball<br><br>Item ID: #2<br><br>Effect: Tries to catch a wild Pokémon. Success rate is 2×.<br><br></p>
+                        <p class="card-text">                        
+                            <input type="text" readonly placeholder="Item Name" id="item_name"></input><br>
+                            <input type="text" readonly placeholder="ID" id="item_id"></input><br>
+                            <input type="text" readonly placeholder="Effect" id="item_effect"></input><br>
                     </div>
                 </div>
             </div><!-- This displays the data/information gathered from the api -->

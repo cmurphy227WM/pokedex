@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style type="text/css">
         body { background: #343a40 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+        input { border: none; padding-top: 1em; padding-bottom: 1em; }
      </style>
 </head>
 <body>
@@ -42,7 +43,11 @@
         <div class="container-sm">
             <div class="card" style="width: 68rem; height: 20rem;">
                 <div class="card-body">
-                    <p class="card-text">Pound<br><br>ID: #1<br><br>Power: 40<br><br>PP: 35</p>
+                    <p class="card-text">
+                        <input type="text" readonly placeholder="Move Name" id="move_name"></input><br>
+                        <input type="text" readonly placeholder="ID" id="move_id"></input><br>
+                        <input type="text" readonly placeholder="Power" id="move_power"></input><br>
+                        <input type="text" readonly placeholder="PP" id="move_pp"></input></p>
                 </div>
             </div>
         </div><!-- This displays the data/information gathered from the api -->
