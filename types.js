@@ -61,10 +61,10 @@ const getData = () =>{
     else if(answer == "ice" || answer == "15"){
         document.getElementById('typeImg').src = "types/Ice.png";
     }
-    else if(answer == "Dragon" || answer == "16"){
+    else if(answer == "dragon" || answer == "16"){
         document.getElementById('typeImg').src = "types/Dragon.png";
     }
-    else if(answer == "Dark" || answer == "17"){
+    else if(answer == "dark" || answer == "17"){
         document.getElementById('typeImg').src = "types/Dark.png";
     }
     else if(answer == "fairy" || answer == "18"){
