@@ -88,8 +88,12 @@ const sendHttpRequest = (method,url) =>{
         var ans = pad.substring(0, pad.length - str.length - str.length) + str
 
 //////// Assign different parts to pokedex using dom selection/////////
-document.getElementById('type_name').innerHTML = capitalize(data.move_damage_class.name);
-document.getElementById('type_gen').innerHTML = capitalize(data.generation.name);  
+document.getElementById('type_name').innerHTML = capitalize(data.name);
+document.getElementById('type_gen').innerHTML = "Generation introduced: " + capitalize(data.generation.name);
+document.getElementById('type_2xfrom').innerHTML = "2x Damage From: <br>"; // capitalize(data.damage_relations.double_damage_from[0].name);
+for(var x = 0; x < data.damage_relations.double_damage_from.length; x++){
+    document.getElementById('type_2xfrom').value += data.damage_relations.double_damage_from[x].name + "<br>";
+}
 }
 
     // or xhr.addeventlister('load',function)
