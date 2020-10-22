@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moves</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="moves.js" defer></script>
     <style type="text/css">
         body { background: #343a40 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
         input { border: none; padding-top: 1em; padding-bottom: 1em; }
@@ -34,8 +35,8 @@
 
     <div class="container"> <!--Search bar for searching move names-->
         <form class="my-5 my-lg-7">
-            <input class="form-control mr-sm-2" type="search" placeholder="Enter Move Name or Move ID Number" aria-label="Search">
-            <button class="btn btn-outline-warning my-2 my-sm-2" type="submit">Search</button>
+            <input id="pName" class="form-control mr-sm-2" type="search" placeholder="Enter Move Name or Move ID Number" aria-label="Search">
+            <button id="get-btn" class="btn btn-outline-warning my-2 my-sm-2" type="button">Search</button>
         </form>
     </div>
 
@@ -43,11 +44,10 @@
         <div class="container-sm">
             <div class="card" style="width: 68rem; height: 20rem;">
                 <div class="card-body">
-                    <p class="card-text">
-                        <input type="text" readonly placeholder="Move Name" id="move_name"></input><br>
-                        <input type="text" readonly placeholder="ID" id="move_id"></input><br>
-                        <input type="text" readonly placeholder="Power" id="move_power"></input><br>
-                        <input type="text" readonly placeholder="PP" id="move_pp"></input></p>
+                    <p id="info_name" class="card-text">Pound</p>
+                    <p id="info_id" class="card-text">Move ID: #01</p>
+                    <p id="info_power" class="card-text">Power: 40</p>
+                    <p id="info_pp" class="card-text">PP: 35</p>
                 </div>
             </div>
         </div><!-- This displays the data/information gathered from the api -->
