@@ -89,12 +89,35 @@ const sendHttpRequest = (method,url) =>{
 
 //////// Assign different parts to pokedex using dom selection/////////
 document.getElementById('type_name').innerHTML = capitalize(data.name);
-document.getElementById('type_gen').innerHTML = "Generation introduced: " + capitalize(data.generation.name);
-document.getElementById('type_2xfrom').innerHTML = "2x Damage From: <br>"; // capitalize(data.damage_relations.double_damage_from[0].name);
+document.getElementById('type_gen').innerHTML = "Generation Introduced: " + capitalize(data.generation.name);
+document.getElementById('type_2xfrom').innerHTML = "2x Damage From: <br>";
 for(var x = 0; x < data.damage_relations.double_damage_from.length; x++){
-    document.getElementById('type_2xfrom').value += data.damage_relations.double_damage_from[x].name + "<br>";
+    document.getElementById('type_2xfrom').innerHTML += capitalize(data.damage_relations.double_damage_from[x].name) + "<br>";
+    if(data.damage_relations.double_damage_from.name == "fighting"){
+        document.getElementbyID('type_2xfrom').innerHTML += "<img src = types/Fighting_Icon.png>Fighting";
+    }
 }
+document.getElementById('type_2xto').innerHTML = "2x Damage To: <br>";
+for(var x = 0; x < data.damage_relations.double_damage_to.length; x++){
+    document.getElementById('type_2xto').innerHTML += capitalize(data.damage_relations.double_damage_to[x].name) + "<br>";
 }
+document.getElementById('type_1/2from').innerHTML = "1/2 Damage From: <br>";
+for(var x = 0; x < data.damage_relations.half_damage_from.length; x++){
+    document.getElementById('type_1/2from').innerHTML += capitalize(data.damage_relations.half_damage_from[x].name) + "<br>";
+}
+document.getElementById('type_1/2to').innerHTML = "1/2 Damage To: <br>";
+for(var x = 0; x < data.damage_relations.half_damage_to.length; x++){
+    document.getElementById('type_1/2to').innerHTML += capitalize(data.damage_relations.half_damage_to[x].name) + "<br>";
+}
+document.getElementById('type_nonefrom').innerHTML = "No Damage From: <br>";
+for(var x = 0; x < data.damage_relations.no_damage_from.length; x++){
+    document.getElementById('type_nonefrom').innerHTML += capitalize(data.damage_relations.no_damage_from[x].name) + "<br>";
+}
+document.getElementById('type_noneto').innerHTML = "No Damage To: <br>";
+for(var x = 0; x < data.damage_relations.no_damage_to.length; x++){
+    document.getElementById('type_noneto').innerHTML += capitalize(data.damage_relations.no_damage_to[x].name) + "<br>";
+}
+    }
 
     // or xhr.addeventlister('load',function)
     xhr.send();
