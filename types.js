@@ -16,10 +16,62 @@ const getData = () =>{
     console.log(answer);
     var tops ="https://pokeapi.co/api/v2/type/" + answer;
     sendHttpRequest('GET', tops);
+    if(answer == "normal" || answer == "1"){
+    document.getElementById('typeImg').src = "types/Normal.png";
+    }
+    else if(answer == "fighting" || answer == "2"){
+        document.getElementById('typeImg').src = "types/Fighting.png";
+    }
+    else if(answer == "flying" || answer == "3"){
+        document.getElementById('typeImg').src = "types/Flying.png";
+    }
+    else if(answer == "poison" || answer == "4"){
+        document.getElementById('typeImg').src = "types/Poison.png";
+    }
+    else if(answer == "ground" || answer == "5"){
+        document.getElementById('typeImg').src = "types/Ground.png";
+    }
+    else if(answer == "rock" || answer == "6"){
+        document.getElementById('typeImg').src = "types/Rock.png";
+    }
+    else if(answer == "bug" || answer == "7"){
+        document.getElementById('typeImg').src = "types/Bug.png";
+    }
+    else if(answer == "ghost" || answer == "8"){
+        document.getElementById('typeImg').src = "types/Ghost.png";
+    }
+    else if(answer == "steel" || answer == "9"){
+        document.getElementById('typeImg').src = "types/Steel.png";
+    }
+    else if(answer == "fire" || answer == "10"){
+        document.getElementById('typeImg').src = "types/Fire.png";
+    }
+    else if(answer == "water" || answer == "11"){
+        document.getElementById('typeImg').src = "types/Water.png";
+    }
+    else if(answer == "grass" || answer == "12"){
+        document.getElementById('typeImg').src = "types/Grass.png";
+    }
+    else if(answer == "electric" || answer == "13"){
+        document.getElementById('typeImg').src = "types/Electric.png";
+    }
+    else if(answer == "psychic" || answer == "14"){
+        document.getElementById('typeImg').src = "types/Psychic.png";
+    }
+    else if(answer == "ice" || answer == "15"){
+        document.getElementById('typeImg').src = "types/Ice.png";
+    }
+    else if(answer == "Dragon" || answer == "16"){
+        document.getElementById('typeImg').src = "types/Dragon.png";
+    }
+    else if(answer == "Dark" || answer == "17"){
+        document.getElementById('typeImg').src = "types/Dark.png";
+    }
+    else if(answer == "fairy" || answer == "18"){
+        document.getElementById('typeImg').src = "types/Fairy.png";
+    }
 };
-if(answer == physical || answer == 1){
-    document.getElementById('typeImg').src = "types/Fighting.png";
-}
+
 ////////// Create callback function with embeded promise/////////////
 const sendHttpRequest = (method,url) =>{
     const promise = new Promise((resolve, reject) =>{
@@ -31,13 +83,14 @@ const sendHttpRequest = (method,url) =>{
         const data = JSON.parse(xhr.response);//converts JSON data to RAW JS Objs & dataTypes
         console.log(data);//JSON Data
 
-        document.getElementById('typeImg').src = data.sprites.front_default;
         var str = "" + data.id
         var pad = "000"
         var ans = pad.substring(0, pad.length - str.length - str.length) + str
 
-//////// Assign diferent parts to pokedex using dom selection/////////
-    }
+//////// Assign different parts to pokedex using dom selection/////////
+document.getElementById('type_name').innerHTML = capitalize(data.move_damage_class.name);
+document.getElementById('type_gen').innerHTML = capitalize(data.generation.name);  
+}
 
     // or xhr.addeventlister('load',function)
     xhr.send();
