@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokedex</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="items.js" defer></script>
     <style type="text/css">
         body { background: #343a40 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+        input { border: none; padding-top: 1em; padding-bottom: 1em; }
      </style>
 </head>
 <body>
@@ -16,7 +18,7 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="https://www.pngkit.com/png/full/230-2308714_pokemon-ultra-ball-png.png" width="30" height="30" alt="" loading="lazy">
                 </a>
-                <a class="navbar-brand" href="index.html">Pokemon</a>
+                <a class="navbar-brand" href="index.html">Ultradex</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,20 +35,22 @@
     </nav>
     <div class="container">
         <form class="my-5 my-lg-7">
-            <input class="form-control mr-sm-2" type="search" placeholder="Enter Item Name or Item ID Number" aria-label="Search">
-            <button class="btn btn-outline-warning my-2 my-sm-2" type="submit">Search</button>
+            <input id="pName" class="form-control mr-sm-2" type="search" placeholder="Enter Item Name or Item ID Number" aria-label="Search">
+            <button id="get-btn" class="btn btn-outline-warning my-2 my-sm-2" type="button">Search</button>
         </form>
     </div> <!-- This is the search bar, content would be put into here and gather information from the api, adding it to the page -->
     <div class="d-flex flex-row container-sm mb-2">
             <div class="container-sm">
                 <div class="card" style="width: 18rem; height: 20rem;">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png" class="card-img-top" alt="Pokemon">
+                    <img id="pokedex_screen" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png" class="card-img-top" alt="Pokemon">
                 </div>
             </div><!-- This displays the image gathered from the api -->
             <div class="container-sm">
                 <div class="card" style="width: 48rem; height: 20rem;">
                     <div class="card-body">
-                        <p class="card-text">Ultra Ball<br><br>Item ID: #2<br><br>Effect: Tries to catch a wild Pokémon. Success rate is 2×.<br><br></p>
+                        <p id="info_name" class="card-text">Ultra Ball</p>
+                        <p id="info_id" class="card-text">Item ID: #02</p>
+                        <p id="info_effect" class="card-text">Used in battle : Attempts to catch a wild Pokémon, using a catch rate of 2×. If used in a trainer battle, nothing happens and the ball is lost.</p>
                     </div>
                 </div>
             </div><!-- This displays the data/information gathered from the api -->
