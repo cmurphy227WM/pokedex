@@ -16,6 +16,7 @@ const getData = () =>{
     console.log(answer);
     var tops ="https://pokeapi.co/api/v2/type/" + answer;
     sendHttpRequest('GET', tops);
+    //Adds type images when they are selected
     if(answer == "normal" || answer == "1"){
     document.getElementById('typeImg').src = "types/Normal.png";
     }
@@ -87,7 +88,7 @@ const sendHttpRequest = (method,url) =>{
         var pad = "000"
         var ans = pad.substring(0, pad.length - str.length - str.length) + str
 
-//////// Assign different parts to pokedex using dom selection/////////
+//////// Type info (Strengths and weaknesses) /////////
 document.getElementById('type_name').innerHTML = capitalize(data.name);
 document.getElementById('type_gen').innerHTML = "Generation Introduced: " + capitalize(data.generation.name);
 document.getElementById('type_2xfrom').innerHTML = "2x Damage From: <br>";
